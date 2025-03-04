@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Study Planner</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <!-- Parallax Scrolling Effect -->
+  <div class="parallax">
+    <div class="container">
+      <!-- Dark Mode Toggle -->
+      <div class="dark-mode-toggle">
+        <input type="checkbox" id="dark-mode-toggle">
+        <label for="dark-mode-toggle" class="toggle-label">
+          <i class="fas fa-moon"></i>
+          <i class="fas fa-sun"></i>
+
+        </label>
+      </div>
+
+      <!-- Navigation Menu -->
+      <nav class="navbar">
+        <ul>
+          <li><a href="#timetable" class="nav-link active"><i class="fas fa-calendar-alt"></i> Timetable</a></li>
+          <li><a href="#assignments" class="nav-link"><i class="fas fa-tasks"></i> Assignments</a></li>
+          <li><a href="#exam-goals" class="nav-link"><i class="fas fa-bullseye"></i> Exam Goals</a></li>
+          <li><a href="#pomodoro" class="nav-link"><i class="fas fa-clock"></i> Pomodoro</a></li>
+        </ul>
+      </nav>
+
+      <!-- Study Timetable Page -->
+      <section id="timetable" class="page active">
+        <h2><i class="fas fa-calendar-alt"></i> <span class="liquid-text">Study Timetable</span></h2>
+        <div class="form">
+          <input type="text" id="task-name" placeholder="Task Name">
+          <input type="time" id="task-time">
+          <button id="add-task" class="btn morphing-btn"><i class="fas fa-plus"></i> Add Task</button>
+        </div>
+        <ul id="task-list" class="list"></ul>
+      </section>
+
+      <!-- Assignment Tracker Page -->
+      <section id="assignments" class="page">
+        <h2><i class="fas fa-tasks"></i> <span class="liquid-text">Assignment Tracker</span></h2>
+        <div class="form">
+          <input type="text" id="assignment-name" placeholder="Assignment Name">
+          <input type="date" id="assignment-due-date">
+          <button id="add-assignment" class="btn morphing-btn"><i class="fas fa-plus"></i> Add Assignment</button>
+        </div>
+        <ul id="assignment-list" class="list"></ul>
+      </section>
+
+      <!-- Exam Goal Setting Page -->
+      <section id="exam-goals" class="page">
+        <h2><i class="fas fa-bullseye"></i> <span class="liquid-text">Exam Goals</span></h2>
+        <div class="form">
+          <input type="text" id="goal-name" placeholder="Goal Name">
+          <input type="date" id="goal-deadline">
+          <button id="add-goal" class="btn morphing-btn"><i class="fas fa-plus"></i> Add Goal</button>
+        </div>
+        <ul id="goal-list" class="list"></ul>
+      </section>
+
+      <!-- Pomodoro Timer Page -->
+      <section id="pomodoro" class="page">
+        <h2><i class="fas fa-clock"></i> <span class="liquid-text">Pomodoro Timer</span></h2>
+        <div class="form">
+          <input type="number" id="custom-minutes" placeholder="Minutes" min="1" max="60">
+          <button id="set-time" class="btn morphing-btn"><i class="fas fa-check"></i> Set Time</button>
+        </div>
+        <div id="timer">
+          <span id="minutes">25</span>:<span id="seconds">00</span>
+        </div>
+        <div class="timer-controls">
+          <button id="start-timer" class="btn morphing-btn"><i class="fas fa-play"></i> Start</button>
+          <button id="reset-timer" class="btn morphing-btn"><i class="fas fa-redo"></i> Reset</button>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
